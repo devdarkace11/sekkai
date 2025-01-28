@@ -1,1 +1,234 @@
-hey
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sekkAI - AI Text Based Game</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts for a playful vibe -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Fredoka+One&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./styles.css">
+    <!-- Custom CSS -->
+    <style>
+      
+        body {
+            font-family: 'Fredoka One', cursive;
+            background-color: #000000;
+            /* Black background */
+            color: #ffeb3b;
+            /* Yellow text */
+        }
+
+        .navbar {
+            background-color: #000000 !important;
+            /* Black navbar */
+            border-bottom: 2px solid #ffeb3b;
+            /* Yellow border */
+        }
+
+        .navbar-brand {
+            font-family: 'Press Start 2P', cursive;
+            color: #ffeb3b !important;
+            /* Yellow text */
+        }
+
+        .hero-section {
+            background: url('./hero.jpg') no-repeat center top/cover;
+            color: #ffeb3b;
+            /* Yellow text */
+            padding: 150px 0;
+            text-align: center;
+            min-height: 600px;
+        }
+
+        .buy-section {
+            color: #ffeb3b;
+
+            text-align: center;
+        }
+
+        .hero-section h1 {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 3rem;
+            text-shadow: 2px 2px 5px #ffeb3b;
+            /* Yellow shadow */
+        }
+
+        .hero-section p {
+            font-size: 1.5rem;
+            text-shadow: 1px 1px 3px #ffeb3b;
+            /* Yellow shadow */
+        }
+
+        .btn-primary {
+            background-color: #ffeb3b;
+            /* Yellow button */
+            border: none;
+            color: #000000;
+            /* Black text */
+            font-family: 'Press Start 2P', cursive;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            transition: transform 0.2s;
+        }
+
+        .btn-primary:hover {
+            background-color: #fdd835;
+            /* Slightly darker yellow on hover */
+            transform: scale(1.1);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            color: #ffeb3b;
+            /* Yellow icons */
+        }
+
+        .feature-card {
+            background-color: #1a1a1a;
+            /* Dark gray card background */
+            border: 2px solid #ffeb3b;
+            /* Yellow border */
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.2s;
+            color: #ffeb3b;
+            /* Yellow text */
+        }
+
+        .feature-card:hover {
+            transform: scale(1.05);
+        }
+
+        .footer {
+            background-color: #000000;
+            /* Black footer */
+            color: #ffeb3b;
+            /* Yellow text */
+            padding: 20px 0;
+            text-align: center;
+            border-top: 2px solid #ffeb3b;
+            /* Yellow border */
+        }
+
+        .goals-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .goals-list li {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .goals-list li::before {
+            content: "•";
+            color: #ffeb3b;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        .coming-soon {
+            color: #ffeb3b;
+            font-style: italic;
+            font-size: 0.9rem;
+            margin-left: 10px;
+        }
+
+    </style>
+</head>
+
+<body class="pb-5 bg-dark">
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">sekkAI</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="bg-dark py-5">
+                <h1>Welcome to $sekkAI!</h1>
+                <p>A text-based adventure AI game</p>
+                <a href="#" class="btn btn-primary" onclick="launchBot()">Start Playing</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="home" class="buy-section mt-5">
+        <div class="container">
+            <div class="bg-dark">
+                <a href="#" class="btn btn-primary">Buy $sekkAI</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-5 bg-dark">
+        <div class="container">
+            <h2 class="text-center mb-5">Features</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon mb-3">
+                            <i class="bi bi-robot"></i>
+                        </div>
+                        <h3>AI-Powered</h3>
+                        <p>Experience the power of AI in every game session. Our bot learns and adapts to your play
+                            style.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon mb-3">
+                            <i class="bi bi-chat-dots"></i>
+                        </div>
+                        <h3>Interactive Chat</h3>
+                        <p>Engage in interactive conversations with the bot, making the game more immersive and fun.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 bg-dark">
+        <div class="container">
+
+            <h3 class="text-center mt-5">Our Goals</h3>
+            <ul class="goals-list text-center mt-5">
+                <li>Landing page release ✅</li>
+                <li>Launch $sekkAI <span class="coming-soon">(coming soon)</span></li>
+                <li>Web integration <span class="coming-soon">(coming soon)</span></li>
+                <li>Train AI Dungeon Overlord<span class="coming-soon">(coming soon)</span></li>
+            </ul>
+        </div>
+    </section>
+
+
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script>
+        function launchBot() {
+            window.open("https://t.me/gamefi_sekai_bot", "_blank");
+        }
+    </script>
+</body>
+
+</html>
